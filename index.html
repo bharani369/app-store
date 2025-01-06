@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>App store</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://unpkg.com/lenis@1.1.18/dist/lenis.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <header class="header">
+        <a style="color: black;" href="#" class="logo">NEXUS HUB</a>
+
+        <i class="bx bx-menu fa-solid fa-bars" id="menu-icon"></i>
+
+        <nav class="navbar">
+            <a href="#">Home</a>
+            <a href="#">Contact</a>
+        </nav>
+    </header>
+    <div class="nav-bg"></div>
+    
+    <!--bharani dharan b.tech it-->
+
+
+<div class="container">
+    <center>
+    <img class="app" width="150px" src="pngwing.com.png" alt="" srcset="">
+    <br>
+    <h3>NH Store</h3>
+</center>
+</div>
+    <div id="search-container">
+        <input type="text" id="search-input" placeholder="search Apps">
+    </div>
+    <h1>APPS</h1>
+    <div class="row" id="item-list">
+        <li class="item "><img src="you.png" alt=""> youtube </li>
+        <li class="item "><img src="face.png" alt="">FaceBook </li>
+        <li class="item "><img src="snap.png" alt="">snapchat </li>
+        <li class="item "><img src="linkedin.png" alt="">linkedin </li>
+        <li class="item "><img src="whats.png" alt="">whatsapp </li>
+        <li class="item "><img src="tik.png" alt="">tiktok </li>
+        <li class="item "><img src="mail.png" alt="">email </li>
+        <li class="item "><img src="spo.png" alt="">spolify </li>
+        <li class="item "><img src="cap.webp" alt="">capcut </li>
+        <li class="item "><img src="tele.png" alt="">telegram </li>
+        <li class="item "><img src="pin.png" alt="">Pinsert </li>
+        <li class="item "><img src="x.png" alt="">x </li>
+        <li class="item "><img src="insta.png" alt="">instagram </li>
+        <li class="item "><img src="3992652.webp" alt="">fire </li>
+        <li class="item "><img src="disney-plus-hotstar-app-icon-free-png.webp" alt="">disney </li>
+        <li class="item "><img src="music.png" alt="">music </li>
+        <li class="item "><img src="free-netflix-3d-logo-download-in-png-blend-fbx-gltf-file-formats--social-media-pack-logos-2447898.webp" alt="">netflix </li>
+        <li class="item "><img src="free-upload-cloud-3d-icon-download-in-png-blend-fbx-gltf-file-formats--to-essential-pack-user-interface-icons-5576132.webp" alt="">terabox </li>
+        <li class="item "><img src="player.webp" alt="">mxplayer </li>
+        <li class="item "><img src="bin.webp" alt="">binance </li>
+        <li class="item "><img src="Amazon_transparent_400_emp.webp" alt="">amzon </li>
+        <li class="item "><img src="pay.webp" alt="">gpay </li>
+    </div>
+
+
+  <!--This is only for smooth scroll not include app store code app store in script-js file -->
+
+
+    <script src="https://unpkg.com/lenis@1.1.18/dist/lenis.min.js"></script>
+    <script>
+        // Initialize Lenis
+const lenis = new Lenis({
+  autoRaf: true,
+});
+
+// Listen for the scroll event and log the event data
+lenis.on('scroll', (e) => {
+  console.log(e);
+});
+    </script> 
+    <script>
+        // Initialize a new Lenis instance for smooth scrolling
+const lenis = new Lenis();
+
+// Synchronize Lenis scrolling with GSAP's ScrollTrigger plugin
+lenis.on('scroll', ScrollTrigger.update);
+
+// Add Lenis's requestAnimationFrame (raf) method to GSAP's ticker
+// This ensures Lenis's smooth scroll animation updates on each GSAP tick
+gsap.ticker.add((time) => {
+  lenis.raf(time * 1000); // Convert time from seconds to milliseconds
+});
+
+// Disable lag smoothing in GSAP to prevent any delay in scroll animations
+gsap.ticker.lagSmoothing(0);
+
+    </script>
+    <script src="script.js"></script>
+</body>
+</html>
